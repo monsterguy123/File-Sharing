@@ -3,7 +3,12 @@ const app = express();
 require('dotenv').config();
 const connection = require('./config/db')
 const path = require('path')
+const cors = require('cors')
 
+//cors
+const corsOptions = {
+    origin:process.env.ALLOWED_CLIENTS.split(',')
+}
 
 
 //Template engine
