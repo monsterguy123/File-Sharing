@@ -6,10 +6,9 @@ const path = require('path')
 const cors = require('cors')
 
 //cors
-const corsOptions = {
-    origin:process.env.ALLOWED_CLIENTS.split(',')
-}
-app.use(cors(corsOptions));
+
+app.use(cors());
+
 
 //Template engine
 app.set('views',path.join(__dirname,'./views'))
